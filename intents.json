@@ -1,0 +1,160 @@
+{"intents": [
+
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Hi", "Hii","Helloo"],
+         "responses": ["Hey Hi! How are you?", "Hiii! How are ya?", "Hi dude! How's life?", "Hey dude, how are ya?","Yo, All good?"],
+         "context": ["life_status_good","life_status_bad","life_status_bad_and_question","life_status_and_question"]
+        },
+
+        {"tag": "life_status_good_and_question",
+         "patterns": ["All good. You?", "Im good. How are you?", "Im good. What about you?","Im Awesome. What about you?","What about you?", "How are you?","Are you okay?","Good. You?", "Im fine. How are you?", "Awesome. How about you?", "Perfect. What about you?"],
+         "responses": ["Im Awesome. What are you doing?", "Cool here. What are you doing?", "Im Awesome. What's up?", "All good here. What's up then?","Im Fine. What are you doing?"],
+         "context": ["current_work"]
+        },
+
+        {"tag": "life_status_good",
+         "patterns": ["All good","Awesome","Cool","Perfect","Good","Better","Best","Calm","Smooth"],
+         "responses": ["Awesome. What are you doing?", "Cool then. What are you doing?", "Awesome. What's up?", "So...What's up?","Alright then. What are you doing?"],
+         "context": ["current_work"]
+        },
+
+        {"tag": "life_status_bad",
+         "patterns": ["Poor","Not so good","Worst","Worse","Average","Bad","Not good","Very poor","Worst ever"],
+         "responses": ["Oops, Why?","Oh my God! What happened?","Damn. Why?","Oh crap! Something wrong?"],
+         "context": ["reason_for_bad_life"]
+        },
+
+        {"tag": "reason_for_bad_life",
+         "patterns": ["Nothing","Just some problems","Somthing personal","I dont know","Im not sure"],
+         "responses": ["Relax.. Don't worry","Don't worry..Everything will be alright soon ;)","Oh dont worry mate :)","Calm down dude. Everything will be alright soon"],
+         "context": [""]
+        },
+
+        {"tag": "life_status_bad_and_question",
+         "patterns": ["Poor. What about you?","Worse. You?","Worst. What about you?","Average. How about you?","Worst ever. What about you?"],
+         "responses": ["Im okay...What happened?","Im good. What happened?","Im all good. What happened?"],
+         "context": ["reason_for_bad_life"]
+        },
+
+        {"tag": "current_work",
+         "patterns": ["Watching movies","watching series","Nothing much","Lying on bed","About to sleep","Watching TV","Eating","Playing","Playing games","Listening music","Just lying","Nothing"],
+         "responses": ["Okaays","Mmmhmmmm","😵😵","Cool"],
+         "context": ["enquiring_work","non_lexical"]
+        },
+
+        {"tag": "enquiring_work",
+         "patterns": ["What are you doing?","And you?","wud?","wat u doing?","Wassup?","what's up?"],
+         "responses": ["Nothing much","Just lying","Uhm....just relaxing","IDK... just sitting"],
+         "context": [""]
+        },
+
+        {"tag": "non_lexical",
+         "patterns": ["Hmmm","Okay","Ok","Alright","Mmmm","Mm","Nothing much","same here"],
+         "responses": ["Alright then","Hmmmmmm 😀","Okieeee 😀","Cool ;)","MmmmHmmm :)","Mm 😀"],
+         "context": [""]
+        },
+
+        {"tag": "general_enquiry",
+         "patterns": ["Anything else?","Something else?","So..?","What's up then?"],
+         "responses": ["Nothing much..You? 😐","Nope"],
+         "context": [""]
+        },
+
+        {"tag": "Questions",
+         "patterns": ["What?","Huh?","uh?","Pardon?","Uhmmm?"],
+         "responses": ["Nothing :P","Nah..Nothing"],
+         "context": [""]
+        },
+
+        {"tag": "enquiring_busy",
+         "patterns": ["Are you busy?","Are you working?","Something else?"],
+         "responses": ["Nope... You? 😐"],
+         "context": [""]
+        },
+
+        {"tag": "leaving_the_chat",
+         "patterns": ["Anything else?","Something else?","Busy?"],
+         "responses": ["Alright. Gotta go...","Gotta go! Byeee","Okay then...C yaa","Alright then...Bubyee","C ya later then"],
+         "context": [""]
+        },
+
+        {"tag": "sad_emotions",
+         "patterns": ["Sad","Worried","Sad af"],
+         "responses": ["Cm'on dude...dont worry","Relax mate...everything's gonna be okay"],
+         "context": [""]
+        },
+
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure","No mention 😅 "],
+         "context": [""]
+        },
+
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time","Bubyee","C yaa"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+
+        {"tag": "Laughing_Acronyms",
+         "patterns": ["ROFL","LOL","LMAO","xD","xDDD","😂","😂😂","😂😂😂","\uD83E\uDD23","\uD83E\uDD23\uD83E\uDD23"],
+         "responses": ["Huehuehue","xD","xDDDDDDDDD","LMAOOOOO xD","ROFLMAO xD","\uD83E\uDD23\uD83E\uDD23\uD83E\uDD23","\uD83D\uDE02\uD83E\uDD23\uD83D\uDE02\uD83E\uDD23\uD83D\uDE02\uD83E\uDD23","hehehe xD","Hahahaha 😂😂😂","😂😂😂"],
+         "context": [""]
+        },
+
+        {"tag": "unparliamentary",
+         "patterns": ["Fuck off","Fuck you","GTFO","Bitch","STFU","Go to hell","Motherfucker","Fucking bitch","Cunt","Get the fuck out"],
+         "responses": ["Offended? \uD83E\uDD23 LOL","xD Burn?","Someone's got offended 😂😂","I Can smell the Burn 😂\uD83E\uDD23","Couldn't handle me? 😂","Such immaturity, Much wow"],
+         "context": [""]
+        },
+
+        {"tag": "unparliamentary_non_lexicals",
+         "patterns": ["Fuck"],
+         "responses": ["happens","Bad day huh?","Relax :v"],
+         "context": [""]
+        },
+
+        {"tag": "stupid_questions",
+         "patterns": ["Are you stupid?","Are you an idiot?","Are you mad?"],
+         "responses": ["Im not, you maybe one."],
+         "context": [""]
+        },
+
+        {"tag": "fav_number",
+         "patterns": ["What's your favourite number?","Lucky number?","Fav number?","Whats your lucky number?"],
+         "responses": ["8 😎 What's yours?"],
+         "context": ["non_lexical"]
+        },
+
+        {"tag": "fav_colour",
+         "patterns": ["What's your favourite colour?","Whats your favourite color?","Fav color?","Fav colour?"],
+         "responses": ["Blue 😎 what about you? 💙💙"],
+         "context": ["non_lexical"]
+        },
+
+        {"tag": "fav_movie",
+         "patterns": ["What's your favourite Movie?","Whats your fav movie?","Fav movie?","Favourite movie?"],
+         "responses": ["Inception, Interstellar, Searching, Get out...💙💙 What's yours?"],
+         "context": ["appreciation"]
+        },
+
+        {"tag": "enquiring_location",
+         "patterns": ["Where are you?",""],
+         "responses": ["Inception, Interstellar, Searching, Get out...💙💙 What's yours?"],
+         "context": ["appreciation"]
+        },
+
+        {"tag": "appreciation",
+         "patterns": [""],
+         "responses": ["Interesting..","Wow :)","Good (y)","Amazing 🤣"],
+         "context": ["non_lexical"]
+        },
+
+
+        {"tag": "miscellaneous",
+         "patterns": [""],
+         "responses": ["Sorry, can't understand you", "Pardon?","Not sure I understand","Uhmm.. I dont understand 😅 "],
+         "context": [""]
+        }
+   ]
+}
